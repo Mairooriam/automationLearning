@@ -79,7 +79,7 @@ CConnector4YESNO-1NO
 
 CCfgEditObject1ValveValve1
 CValue1
-CValueItem1gHV_10040NO
+CValueItem1gValves.HV_140NO
 CTRconnections0
 CTRinputs1
 2
@@ -87,7 +87,7 @@ CConnector4YESNO-1NO
 
 CCfgEditObject1ValveValve2
 CValue1
-CValueItem1gHV_10040NO
+CValueItem1gValves.HV_140NO
 CTRconnections0
 CTRparams0
 CTRmargblocks1
@@ -108,11 +108,11 @@ END_VAR
 
 {NetworkNumber := 1}
 {ExecutionOrder := 1}
-LD gHV_100
+LD gValves.HV_1
 ST HV_100_FBD.Valve
 CAL HV_100_FBD
 LD HV_100_FBD.Valve
-ST gHV_100
+ST gValves.HV_1
 
 
 END_PROGRAM
