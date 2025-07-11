@@ -19,10 +19,13 @@ CBlockType4NONONO10YES
 
 CCfgEditObject1Valve_on_off-1
 CTRinputtype1
-CClass2NOYES0NOvalve_typNO
+CClass2NOYES0NOvalve_typYES
+
+CCfgEditObject1Valve2
+CTRoutputtype1
+CClass2NONO0NOvalve_typYES
 
 CCfgEditObject1Valve1
-CTRoutputtype0
 CTRparamtype0
 CPageFormat100NO326
 CExtend_IEC_Info00
@@ -70,14 +73,21 @@ CFirmwareBlock0HV_100_FBD
 CBlock7154421NO
 
 CCfgEditObject1Valve_on_off1Valve_on_off15
-CTRoutputs0
-CTRinputs1
+CTRoutputs1
 1
 CConnector4YESNO-1NO
 
 CCfgEditObject1ValveValve1
 CValue1
-CValueItem1HV_10040NO
+CValueItem1gHV_10040NO
+CTRconnections0
+CTRinputs1
+2
+CConnector4YESNO-1NO
+
+CCfgEditObject1ValveValve2
+CValue1
+CValueItem1gHV_10040NO
 CTRconnections0
 CTRparams0
 CTRmargblocks1
@@ -98,9 +108,11 @@ END_VAR
 
 {NetworkNumber := 1}
 {ExecutionOrder := 1}
-LD HV_100
+LD gHV_100
 ST HV_100_FBD.Valve
 CAL HV_100_FBD
+LD HV_100_FBD.Valve
+ST gHV_100
 
 
 END_PROGRAM

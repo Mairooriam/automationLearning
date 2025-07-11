@@ -14,7 +14,7 @@
 END_FUNCTION_BLOCK
 
 {REDUND_ERROR} FUNCTION_BLOCK Valve_on_off (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
-	VAR_INPUT
+	VAR_IN_OUT
 		Valve : valve_typ;
 	END_VAR
 	VAR
