@@ -1,0 +1,180 @@
+FUNCTION_BLOCK Valve_on_off
+
+<?AutomationStudio FileVersion="4.9"?>
+(* GRAPHIC_INFORMATION_27DEE8E8_593B_45A1_8A15_7A695968B886_BEGIN *)
+1CFCFBD-EditorFbdChart5.004.031
+CFBDDoc1
+
+CBaseDoc0
+
+CPageFormat100NO326
+CProject6
+
+CCfgEditObject1-1
+CTRrefdatatypes2
+CDataType0BOOL15
+CDataType0INT16
+CTRrefblocktypes1
+CFirmwareBlockType0
+
+CBlockType4NONONO10YES
+
+CCfgEditObject1Valve_on_off_IMPL-1
+CTRinputtype5
+CClass2NOYES0NOBOOLNO
+
+CCfgEditObject1cmd1
+CClass2NOYES1NOBOOLNO
+
+CCfgEditObject1cmd_manual2
+CClass2NOYES2NOINTNO
+
+CCfgEditObject1mode3
+CClass2NOYES3NOBOOLNO
+
+CCfgEditObject1cmd_fallback4
+CClass2NOYES4NOBOOLNO
+
+CCfgEditObject1interlock5
+CTRoutputtype2
+CClass2NONO0NOBOOLNO
+
+CCfgEditObject1cmd_out6
+CClass2NONO1NOINTNO
+
+CCfgEditObject1status7
+CTRparamtype0
+CPageFormat100NO326
+CExtend_IEC_Info00
+CFBDDiagramChart01
+
+CFunctionChart41NO
+
+CCfgEditObject1-1
+CPageFormat100NO327
+CTRblocks1
+8
+CFBDNetworkBlockType1
+CPageFormat100NO327
+CFBDNetworkBlock1NO
+
+CFreeCompoundBlock1NO
+
+CUserBlock0
+
+COrganisationBlock0
+
+CBlock700011NO
+
+CCfgEditObject11
+CTRoutputs0
+CTRinputs0
+CTRparams0
+CFunctionChart42NO
+
+CCfgEditObject1-1
+CPageFormat100NO327
+CTRblocks2
+7
+CTextBlock0
+
+CBlock710082NO
+
+CCfgEditObject1(* TODO: Add your comment here *)110
+CTRoutputs0
+CTRinputs0
+CTRparams0
+0Valve_on_off_IMPLValve_on_off_IMPL
+CFirmwareBlock0Valve_on_off_IMPL_Instance
+
+CBlock7132541NO
+
+CCfgEditObject1Valve_on_off_IMPL1Valve_on_off_IMPL15
+CTRoutputs2
+6
+CConnector4YESNO-1NO
+
+CCfgEditObject1cmd_outcmd_out6
+CValue1
+CValueItem1Valve.cmd_out15NO
+CTRconnections0
+7
+CConnector4YESNO-1NO
+
+CCfgEditObject1statusstatus7
+CValue1
+CValueItem1Valve.status16NO
+CTRconnections0
+CTRinputs5
+1
+CConnector4YESNO-1NO
+
+CCfgEditObject1cmdcmd1
+CValue1
+CValueItem1Valve.cmd15NO
+CTRconnections0
+2
+CConnector4YESNO-1NO
+
+CCfgEditObject1cmd_manualcmd_manual2
+CValue1
+CValueItem1Valve.cmd_manual15NO
+CTRconnections0
+3
+CConnector4YESNO-1NO
+
+CCfgEditObject1modemode3
+CValue1
+CValueItem1Valve.mode16NO
+CTRconnections0
+4
+CConnector4YESNO-1NO
+
+CCfgEditObject1cmd_fallbackcmd_fallback4
+CValue1
+CValueItem1Valve.cmd_fallback15NO
+CTRconnections0
+5
+CConnector4YESNO-1NO
+
+CCfgEditObject1interlockinterlock5
+CValue1
+CValueItem1Valve.interlock15NO
+CTRconnections0
+CTRparams0
+CTRmargblocks1
+501
+CMarginBlock0
+
+CBlock700011NO
+
+CCfgEditObject11
+CTRoutputs0
+CTRinputs0
+CTRparams0
+CTRmargblocks0NO
+(* GRAPHIC_INFORMATION_27DEE8E8_593B_45A1_8A15_7A695968B886_END *)
+VAR
+END_VAR
+
+
+{NetworkNumber := 1}
+{ExecutionOrder := 1}
+LD Valve.cmd
+ST Valve_on_off_IMPL_Instance.cmd
+LD Valve.cmd_manual
+ST Valve_on_off_IMPL_Instance.cmd_manual
+LD Valve.mode
+ST Valve_on_off_IMPL_Instance.mode
+LD Valve.cmd_fallback
+ST Valve_on_off_IMPL_Instance.cmd_fallback
+LD Valve.interlock
+ST Valve_on_off_IMPL_Instance.interlock
+CAL Valve_on_off_IMPL_Instance
+LD Valve_on_off_IMPL_Instance.cmd_out
+ST Valve.cmd_out
+LD Valve_on_off_IMPL_Instance.status
+ST Valve.status
+
+
+END_FUNCTION_BLOCK
