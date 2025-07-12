@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Private="true" TransferedForTargetSourceCompare="true">Valves.typ</Object>
+    <Object Type="File" Private="true" TransferedForTargetSourceCompare="true">Valves.var</Object>
+    <Object Type="Program" Language="IEC" TransferedForTargetSourceCompare="true">MirValveExampleST</Object>
+    <Object Type="Program" Language="IEC" TransferedForTargetSourceCompare="true">MirValveExample</Object>
+    <Object Type="Program" Language="IEC" TransferedForTargetSourceCompare="true">HMI</Object>
+  </Objects>
+</Package>

@@ -34,11 +34,11 @@ CFBDDiagramChart01
 CFunctionChart41NO
 
 CCfgEditObject1-1
-CPageFormat100NO327
+CPageFormat100NO329
 CTRblocks1
 8
 CFBDNetworkBlockType1
-CPageFormat100NO327
+CPageFormat100NO329
 CFBDNetworkBlock1NO
 
 CFreeCompoundBlock1NO
@@ -56,8 +56,8 @@ CTRparams0
 CFunctionChart42NO
 
 CCfgEditObject1-1
-CPageFormat100NO327
-CTRblocks2
+CPageFormat100NO329
+CTRblocks3
 7
 CTextBlock0
 
@@ -90,6 +90,29 @@ CValue1
 CValueItem1gValves.HV_140NO
 CTRconnections0
 CTRparams0
+0Valve_on_offValve_on_off
+CFirmwareBlock0HV_101_FBD
+
+CBlock7256422NO
+
+CCfgEditObject1Valve_on_off2Valve_on_off20
+CTRoutputs1
+1
+CConnector4YESNO-1NO
+
+CCfgEditObject1ValveValve1
+CValue1
+CValueItem1gValves.HV_240NO
+CTRconnections0
+CTRinputs1
+2
+CConnector4YESNO-1NO
+
+CCfgEditObject1ValveValve2
+CValue1
+CValueItem1gValves.HV_240NO
+CTRconnections0
+CTRparams0
 CTRmargblocks1
 501
 CMarginBlock0
@@ -113,6 +136,12 @@ ST HV_100_FBD.Valve
 CAL HV_100_FBD
 LD HV_100_FBD.Valve
 ST gValves.HV_1
+{ExecutionOrder := 2}
+LD gValves.HV_2
+ST HV_101_FBD.Valve
+CAL HV_101_FBD
+LD HV_101_FBD.Valve
+ST gValves.HV_2
 
 
 END_PROGRAM

@@ -1,0 +1,3 @@
+VAR
+	gValves : gValve_collection;
+END_VAR

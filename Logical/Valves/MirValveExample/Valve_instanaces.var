@@ -1,0 +1,5 @@
+VAR
+	HV_100_FBD : Valve_on_off;
+	HV_101_FBD : Valve_on_off;
+	HV_101_FBD1 : Valve_on_off;
+END_VAR

@@ -1,3 +1,4 @@
 VAR
+	HV_2_instance : Valve_on_off;
 	HV_1_instance : Valve_on_off;
 END_VAR
