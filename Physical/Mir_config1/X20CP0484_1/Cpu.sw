@@ -5,8 +5,9 @@
     <Task Name="MirValveEx" Source="Valves.MirValveExample.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="HMI" Source="Valves.HMI.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="MirValveE1" Source="Valves.MirValveExampleST.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="Timer" Source="Timer.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <Libraries>
-    <LibraryObject Name="Valve" Source="Libraries.Valve.lby" Memory="UserROM" Language="IEC" Debugging="true" />
+    <LibraryObject Name="MirLib" Source="Libraries.MirLib.lby" Memory="UserROM" Language="IEC" Debugging="true" />
   </Libraries>
 </SwConfiguration>

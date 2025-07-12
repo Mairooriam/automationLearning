@@ -11,38 +11,46 @@ CPageFormat100NO326
 CProject6
 
 CCfgEditObject1-1
-CTRrefdatatypes2
+CTRrefdatatypes4
 CDataType0BOOL15
+CDataType0TIME39
+CDataType0limit_switch_mode_enum40
 CDataType0INT16
 CTRrefblocktypes1
 CFirmwareBlockType0
 
 CBlockType4NONONO10YES
 
-CCfgEditObject1Valve_on_off_IMPL-1
-CTRinputtype5
+CCfgEditObject1*Valve_on_off_IMPL-1
+CTRinputtype7
 CClass2NOYES0NOBOOLNO
 
 CCfgEditObject1cmd1
 CClass2NOYES1NOBOOLNO
 
-CCfgEditObject1cmd_manual2
-CClass2NOYES2NOINTNO
+CCfgEditObject1interlock3
+CClass2NOYES2NOBOOLNO
 
-CCfgEditObject1mode3
+CCfgEditObject1interlock_safe_state4
 CClass2NOYES3NOBOOLNO
 
-CCfgEditObject1cmd_fallback4
+CCfgEditObject1bg_open6
 CClass2NOYES4NOBOOLNO
 
-CCfgEditObject1interlock5
+CCfgEditObject1bg_closed7
+CClass2NOYES5NOTIMENO
+
+CCfgEditObject1bg_wait8
+CClass2NOYES6NOlimit_switch_mode_enumNO
+
+CCfgEditObject1bg_mode9
 CTRoutputtype2
 CClass2NONO0NOBOOLNO
 
-CCfgEditObject1cmd_out6
+CCfgEditObject1cmd_out4
 CClass2NONO1NOINTNO
 
-CCfgEditObject1status7
+CCfgEditObject1status5
 CTRparamtype0
 CPageFormat100NO326
 CExtend_IEC_Info00
@@ -51,11 +59,11 @@ CFBDDiagramChart01
 CFunctionChart41NO
 
 CCfgEditObject1-1
-CPageFormat100NO327
+CPageFormat100NO328
 CTRblocks1
 8
 CFBDNetworkBlockType1
-CPageFormat100NO327
+CPageFormat100NO328
 CFBDNetworkBlock1NO
 
 CFreeCompoundBlock1NO
@@ -73,7 +81,7 @@ CTRparams0
 CFunctionChart42NO
 
 CCfgEditObject1-1
-CPageFormat100NO327
+CPageFormat100NO328
 CTRblocks2
 7
 CTextBlock0
@@ -84,28 +92,28 @@ CCfgEditObject1(* TODO: Add your comment here *)110
 CTRoutputs0
 CTRinputs0
 CTRparams0
-0Valve_on_off_IMPLValve_on_off_IMPL
+0*Valve_on_off_IMPL*Valve_on_off_IMPL
 CFirmwareBlock0Valve_on_off_IMPL_Instance
 
-CBlock7132541NO
+CBlock7452551NO
 
-CCfgEditObject1Valve_on_off_IMPL1Valve_on_off_IMPL15
+CCfgEditObject1Valve_on_off_IMPL4*Valve_on_off_IMPL15
 CTRoutputs2
-6
+4
 CConnector4YESNO-1NO
 
-CCfgEditObject1cmd_outcmd_out6
+CCfgEditObject1cmd_outcmd_out4
 CValue1
 CValueItem1Valve.cmd_out15NO
 CTRconnections0
-7
+5
 CConnector4YESNO-1NO
 
-CCfgEditObject1statusstatus7
+CCfgEditObject1statusstatus5
 CValue1
 CValueItem1Valve.status16NO
 CTRconnections0
-CTRinputs5
+CTRinputs7
 1
 CConnector4YESNO-1NO
 
@@ -113,33 +121,47 @@ CCfgEditObject1cmdcmd1
 CValue1
 CValueItem1Valve.cmd15NO
 CTRconnections0
-2
-CConnector4YESNO-1NO
-
-CCfgEditObject1cmd_manualcmd_manual2
-CValue1
-CValueItem1Valve.cmd_manual15NO
-CTRconnections0
 3
 CConnector4YESNO-1NO
 
-CCfgEditObject1modemode3
+CCfgEditObject1interlockinterlock3
 CValue1
-CValueItem1Valve.mode16NO
+CValueItem1Valve.interlock15NO
 CTRconnections0
 4
 CConnector4YESNO-1NO
 
-CCfgEditObject1cmd_fallbackcmd_fallback4
+CCfgEditObject1interlock_safe_stateinterlock_safe_state4
 CValue1
-CValueItem1Valve.cmd_fallback15NO
+CValueItem1Valve.interlock_safe_state15NO
 CTRconnections0
-5
+6
 CConnector4YESNO-1NO
 
-CCfgEditObject1interlockinterlock5
+CCfgEditObject1bg_openbg_open6
 CValue1
-CValueItem1Valve.interlock15NO
+CValueItem1Valve.bg_open15NO
+CTRconnections0
+7
+CConnector4YESNO-1NO
+
+CCfgEditObject1bg_closedbg_closed7
+CValue1
+CValueItem1Valve.bg_closed15NO
+CTRconnections0
+8
+CConnector4YESNO-1NO
+
+CCfgEditObject1bg_waitbg_wait8
+CValue1
+CValueItem1Valve.bg_wait39NO
+CTRconnections0
+9
+CConnector4YESNO-1NO
+
+CCfgEditObject1bg_modebg_mode9
+CValue1
+CValueItem1Valve.bg_mode40NO
 CTRconnections0
 CTRparams0
 CTRmargblocks1
@@ -162,14 +184,18 @@ END_VAR
 {ExecutionOrder := 1}
 LD Valve.cmd
 ST Valve_on_off_IMPL_Instance.cmd
-LD Valve.cmd_manual
-ST Valve_on_off_IMPL_Instance.cmd_manual
-LD Valve.mode
-ST Valve_on_off_IMPL_Instance.mode
-LD Valve.cmd_fallback
-ST Valve_on_off_IMPL_Instance.cmd_fallback
 LD Valve.interlock
 ST Valve_on_off_IMPL_Instance.interlock
+LD Valve.interlock_safe_state
+ST Valve_on_off_IMPL_Instance.interlock_safe_state
+LD Valve.bg_open
+ST Valve_on_off_IMPL_Instance.bg_open
+LD Valve.bg_closed
+ST Valve_on_off_IMPL_Instance.bg_closed
+LD Valve.bg_wait
+ST Valve_on_off_IMPL_Instance.bg_wait
+LD Valve.bg_mode
+ST Valve_on_off_IMPL_Instance.bg_mode
 CAL Valve_on_off_IMPL_Instance
 LD Valve_on_off_IMPL_Instance.cmd_out
 ST Valve.cmd_out

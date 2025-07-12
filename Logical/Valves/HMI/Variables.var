@@ -1,4 +1,4 @@
 VAR
-	ctrl : test_ctrl;
 	HV_100 : HMI_Valve_on_off;
+	ctrl : valve_typ;
 END_VAR

@@ -1,0 +1,5 @@
+VAR
+	test_timer : MirElapsedTimer;
+	test_time : TIME;
+	MirTimer_0 : MirElapsedTimer;
+END_VAR
